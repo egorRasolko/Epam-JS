@@ -1,4 +1,6 @@
-//Arrays and Cycles
+// Arrays and Cycles
+
+// Дан массив состоящий из названий фильмов, выполните перебор массива с выводом в консоль названия каждого фильма
 function check1() {
   let arr = ["film 1", "film 2", "film 3", "film 4"];
   for (let elem of arr) {
@@ -7,6 +9,7 @@ function check1() {
 }
 check1();
 
+// Дан массив производителей автомобилей, преобразовать массив в строку и обратно в массив
 function check2() {
   let arr = ["bmw", "ford", "renault", "audi"];
   let str = arr.join(",");
@@ -15,27 +18,24 @@ function check2() {
 }
 check2();
 
-function check3() {
-  let arr = ["ivan", "ura", "vova", "sasha"];
-  let arr2 = [];
-  for (let elem of arr) {
-    elem = "privet" + " " + elem;
-    arr2.push(elem);
-  }
-  console.log(arr2);
+// Дан массив имен ваших знакомых, добавить к каждому элементу массива слова hello
+function showName() {
+  const namefirst = ["ivan", "ura", "vova", "sasha"];
+  const names = namefirst.map((item) => "hello " + item);
+  console.log(names);
 }
-check3();
+showName();
 
-function check4() {
-  let arr = [1, 6, 7, 8, 3, 4, 5, 6, ""];
-  let arr2 = [];
-  for (let elem of arr) {
-    let boolean = Boolean(elem);
-    arr2.push(boolean);
-    console.log(arr2);
-  }
+// Преобразовать числовой массив в Boolean
+
+function checkBoolean() {
+  const arr = [1, 6, 7, 8, 3, 4, 5, 6, ""];
+  const check = arr.map((item) => Boolean(item));
+  console.log(check);
 }
-check4();
+checkBoolean();
+
+// Отсортировать массив [1,6,7,8,3,4,5,6] по убыванию
 
 function check5() {
   let arr = [1, 6, 7, 8, 3, 4, 5, 6];
@@ -44,26 +44,26 @@ function check5() {
 }
 check5();
 
-function check6() {
-  let arr = [1, 6, 7, 8, 3, 4, 5, 6];
-  for (let i = 0; i <= arr.length; i++) {
-    if (arr[i] > 3) {
-      console.log(arr[i]);
-    }
-  }
-}
-check6();
+// Отфильтровать массив [1,6,7,8,3,4,5,6] по значению >3
 
-function showIndex(arr, num) {
-  let arr = [1, 6, 7, 10, 3, 4, 5, 6];
-  let num = 3;
-  for (let i = 0; i <= arr.length; i++) {
-    if (arr[i] === num) {
-      console.log(i);
-    }
-  }
+function sortArray() {
+  let arr = [1, 6, 7, 8, 3, 4, 5, 6];
+  const result = arr.filter((item) => item > 3);
+  console.log(result);
 }
-showIndex(arr, num);
+sortArray();
+
+//Написать функцию, которая принимает
+// два параметра - массив и число и выводит индекс элемента массива равный числу
+
+function showIndex() {
+  let arr = [1, 6, 7, 10, 3, 4, 5, 6];
+  let result = arr.indexOf(6);
+  console.log(result);
+}
+showIndex();
+
+// Реализовать цикл, который будет выводить число а, пока оно не станет меньше 10
 
 function check6() {
   let a = 30;
@@ -74,6 +74,8 @@ function check6() {
 }
 check6();
 
+// Реализовать цикл, который выводит в консоль простые числа
+
 function check7() {
   let num = 10;
 
@@ -83,12 +85,15 @@ function check7() {
     }
     console.log(i);
   }
+  check7();
+}
 
-  let i = 1;
-
-  while (i <= 99) {
-    console.log(i);
-    i += 2;
+// Реализовать цикл, который выводит в консоль нечетные числа
+function check8() {
+  for (let i = 1; i <= 99; i++) {
+    if (i % 2) {
+      console.log(i);
+    }
   }
 }
-check7;
+check8();
