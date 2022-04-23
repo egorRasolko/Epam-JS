@@ -14,14 +14,14 @@ car.color = "green";
 
 // На склад принимают груши и яблоки,
 // напишите функцию, которая возвращает результат сложения количества принятых груш и яблок
-function fruitCount(apples, pies) {
+function countingFruit(apples, pies) {
   return apples + pies;
 }
 fruitCount(2, 2);
 
 // В терминале оплаты сохранено ваше имя, напишите функцию
 // для определения имени в терминале(если вы ввели ваше имя, то привет + имя, если нет, то нет такого имени)
-function nameTerminal(name) {
+function showNameTerminal(name) {
   if (name === "Egor") {
     alert("privet" + name);
   } else {
