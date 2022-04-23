@@ -1,9 +1,20 @@
 //Exception handling
 
-try {
-  let a = 3 / 0;
-  console.log(a);
-} catch (error) {
-  console.log("let перед использованием нужно объявить");
-  console.log("на ноль делить нельзя");
-}
+// В try catch конструкцию завернуть код: console.log(a), let a = 3.
+//  И вывести ошибку – ‘let перед использованием нужно объявить’. 
+// При выполнении 1/0  выводить ошибку 'на ноль делить нельзя'
+ 
+const checkError = (a, b) => {
+  try {
+    if (!a) {
+      throw "Переменную надо задать";
+    }
+    if (b === 0) {
+      throw "На ноль делить нельзя";
+    }
+    console.log(a / b);
+  } catch (e) {
+    console.log(e);
+  }
+};
+xxx( );
