@@ -1,52 +1,49 @@
 // Objects and Functions
+
+//  Создать объект car, добавить к нему свойство color со значением 'черный'
+// Изменить свойство color объекта car на 'зеленый'
+// В объект car добавить свойство power, которое является функцией и выводит в консоль мощность двигателя
 let car = {
-    color: 'black',
-    power: showPower()
+  color: "black",
+  power: showPower(),
 };
 function showPower() {
-    return '100ls';
-    console.log('100ls');
+  console.log("100hp");
 }
-    car.color = 'green';
+car.color = "green";
 
-
+// На склад принимают груши и яблоки,
+// напишите функцию, которая возвращает результат сложения количества принятых груш и яблок
 function fruitCount(apples, pies) {
-    console.log(apples+pies);
-    return apples+pies;
-
+  return apples + pies;
 }
-fruitCount(2,2);
+fruitCount(2, 2);
 
-
+// В терминале оплаты сохранено ваше имя, напишите функцию
+// для определения имени в терминале(если вы ввели ваше имя, то привет + имя, если нет, то нет такого имени)
 function nameTerminal(name) {
-    if(name==="Egor"){
-        alert('privet'+name);
-    }
-    else{
-        alert('net imeni');
-    }
+  if (name === "Egor") {
+    alert("privet" + name);
+  } else {
+    alert("net imeni");
+  }
 }
-nameTerminal('Egor');
+nameTerminal("Egor");
 
-function typeArgument(x,y) {
-    console.log(typeof arguments[0]);
-    console.log(typeof arguments[1]);
-
+// Напишите функцию вычисления типа аргумента и вывод типа в консоль
+function typeArgument(x, y) {
+  console.log(typeof x, typeof y);
 }
-typeArgument("a",4);
+typeArgument("a", 4);
 
-
-function simpleNumber(num) {
-
-
-    let flag = true;
-    for (let i = 2; i < num; i++) {
-        if (num % i === 0) {
-            flag = false;
-            break;
-        }
+// Напишите функцию, которая определяет является ли число простым или нет
+function showPrimeNumber(num) {
+  for (let divider = 2; divider < num; divider++) {
+    if (num % divider == 0) {
+      return false;
     }
-    console.log(flag);
+  }
+  return num > 1;
 }
 
-simpleNumber(3);
+showPrimeNumber(-1);
