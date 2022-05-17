@@ -14,7 +14,7 @@ car.color = "green";
 
 // На склад принимают груши и яблоки,
 // напишите функцию, которая возвращает результат сложения количества принятых груш и яблок
-function countingFruit(apples, pies) {
+function countingFruits(apples, pies) {
   return apples + pies;
 }
 fruitCount(2, 2);
