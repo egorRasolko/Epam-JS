@@ -23,12 +23,12 @@ fruitCount(2, 2);
 // для определения имени в терминале(если вы ввели ваше имя, то привет + имя, если нет, то нет такого имени)
 function showNameTerminal(name) {
   if (name === "Egor") {
-    alert("privet" + name);
+    console.log("Hello" + name);
   } else {
-    alert("net imeni");
+    console.log("no name");
   }
 }
-nameTerminal("Egor");
+showNameTerminal("Egor");
 
 // Напишите функцию вычисления типа аргумента и вывод типа в консоль
 function typeArgument(x, y) {
@@ -39,7 +39,7 @@ typeArgument("a", 4);
 // Напишите функцию, которая определяет является ли число простым или нет
 function showPrimeNumber(num) {
   for (let divider = 2; divider < num; divider++) {
-    if (num % divider == 0) {
+    if (num % divider === 0) {
       return false;
     }
   }
